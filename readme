@@ -1,0 +1,11 @@
+Solutions to various coding challenges, written in Ruby
+
+1. Arrays and Strings - arrays_strings_challenges.rb
+   a. #string_uniq
+   b. #reverse
+   c. #is_permutation
+   d. #replace_space
+   e. #compress
+   f. #rotate_matrix
+   g. #zerofy_matrix
+   h. #is_rotation
