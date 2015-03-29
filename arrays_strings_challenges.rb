@@ -1,6 +1,8 @@
 # returns true of str has all unique characters, false otherwise
 # iterates over the string and checks if the char at the current index can be
 # found in the [0, current) substring
+# time: O(n^2)
+# space: O(n)
 def string_uniq str
   ans = true
   i = 1
@@ -14,6 +16,8 @@ end
 # reverses a string in place
 # iterates over half of the string and swaps the current char with the char at
 # size - current - 1
+# time: O(n)
+# space: O(n)
 def reverse str
   # str.reverse
   i, s = 0, str.size
@@ -31,6 +35,8 @@ end
 # characters as str2 and each character appears the same number of teams in str1 and str2
 # therefore, use a map to determine the frequences of each char in each string,
 # then just determine if the maps are the same
+# time: O(n^2)
+# space: O(n)
 def is_permutation str1, str2
   mp1, mp2 = {}, {}
   str1.each_char do |c|
@@ -54,6 +60,8 @@ end
 # replace whitespace characters with '%20' in place
 # iterates over the string when when the current char is a single whitespace,
 # replaces is with %20, then skips past the %20 which it just inserted
+# time: O(n)
+# space: O(n)
 def replace_space str
   i = 0
   while i < str.size
@@ -74,7 +82,9 @@ end
 # each letter, then appends the number to the string and resets the count when it
 # reaches a different letter
 # if the original is a shorter string, outputs the original, otherwise outputs
-# the compressed string 
+# the compressed string
+# time: O(n)
+# space: O(n)
 def compress str
   cmp  = ""
   i, cur, cnt = 1, str[0], 1
@@ -127,7 +137,7 @@ end
 def zerofy_matrix mtr
   # mtr is an array of arrays
   ans = []
-  # cloning mtr does not work since it's a shallow copy and it's rows are not copied
+  # cloning mtr does not work since it's a shallow copy and its rows are not copied
   mtr.each {|row| ans << row.clone }
 
   mtr.each_with_index do |row, i|
@@ -152,8 +162,10 @@ end
 # iterates over one of the string, rotating it by one letter each time
 # if the strings become equal at one point, return true. if the iteration is
 # complete, return false
+# time: O(n)
+# space: O(n)
 def is_rotation str1, str2
-  is, i = false, 0
+  i = 0
   while i < str1.size
     if str1 == str2
       return true
