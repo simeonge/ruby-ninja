@@ -1,8 +1,8 @@
 # returns true of str has all unique characters, false otherwise
 # iterates over the string and checks if the char at the current index can be
 # found in the [0, current) substring
-# time: O(n^2)
-# space: O(n)
+# time: O(n^2) - include? takes n/2 time and runs n times
+# space: O(c)
 def string_uniq str
   ans = true
   i = 1
@@ -17,7 +17,7 @@ end
 # iterates over half of the string and swaps the current char with the char at
 # size - current - 1
 # time: O(n)
-# space: O(n)
+# space: O(c)
 def reverse str
   # str.reverse
   i, s = 0, str.size
@@ -35,7 +35,7 @@ end
 # characters as str2 and each character appears the same number of teams in str1 and str2
 # therefore, use a map to determine the frequences of each char in each string,
 # then just determine if the maps are the same
-# time: O(n^2)
+# time: O(n)
 # space: O(n)
 def is_permutation str1, str2
   mp1, mp2 = {}, {}
@@ -43,14 +43,14 @@ def is_permutation str1, str2
     if mp1.has_key? c
       mp1[c] += 1
     else
-      mp1[c] = 0
+      mp1[c] = 1
     end
   end
   str2.each_char do |c|
     if mp2.has_key? c
       mp2[c] += 1
     else
-      mp2[c] = 0
+      mp2[c] = 1
     end
   end
 
@@ -61,7 +61,7 @@ end
 # iterates over the string when when the current char is a single whitespace,
 # replaces is with %20, then skips past the %20 which it just inserted
 # time: O(n)
-# space: O(n)
+# space: O(c)
 def replace_space str
   i = 0
   while i < str.size
@@ -163,7 +163,7 @@ end
 # if the strings become equal at one point, return true. if the iteration is
 # complete, return false
 # time: O(n)
-# space: O(n)
+# space: O(c)
 def is_rotation str1, str2
   i = 0
   while i < str1.size
