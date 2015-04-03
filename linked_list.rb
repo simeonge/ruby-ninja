@@ -30,7 +30,7 @@ class LinkedList
     end
   end
 
-  # removes the item at the specified index
+  # removes the item at the specified index and returns it
   def remove index
     return if @head == nil # if list is empty
     # remove from the beginning
@@ -44,7 +44,9 @@ class LinkedList
         cur = cur.nxt
         i += 1
       end
+      # rmvd = cur.nxt
       cur.nxt = cur.nxt.nxt # can be nil
+      # return rmvd
     end
   end
 
