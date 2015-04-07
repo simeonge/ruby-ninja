@@ -2,8 +2,8 @@
 def contains list, item
   cur = list.head
 
-  while cur.nxt != nil
-    return true if cur == item
+  while cur != nil
+    return true if cur.node == item
     cur = cur.nxt
   end
 
@@ -18,13 +18,13 @@ end
 def remove_dupes list
   cur = list.head
   i = 0
-  while cur.nxt != nil
+  while cur != nil
     list.remove i
-    if !contains(list, cur)
-      list.insert cur, i
+    if !contains(list, cur.node)
+      list.insert cur.node, i
+      i += 1
     end
     cur = cur.nxt
-    i += 1
   end
 
   return list
