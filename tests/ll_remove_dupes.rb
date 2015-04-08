@@ -1,5 +1,4 @@
 require 'minitest/autorun'
-require_relative '../linked_list.rb'
 require_relative '../linked_list_challenges.rb'
 
 class TestRemoveDupes < MiniTest::Unit::TestCase
