@@ -26,27 +26,31 @@ class TestFindKLast < MiniTest::Unit::TestCase
   end
 
   def test_first
-
+    assert_equal(8, find_klast(@list, 10))
   end
 
   def test_middle
-
+    assert_equal(57, find_klast(@list, 5))
   end
 
   def test_end
-
+    assert_equal(3, find_klast(@list, 3))
   end
 
   def test_beginning
-
+    assert_equal(11, find_klast(@list, 9))
   end
 
   def test_outofbounds_before
-
+    assert_equal(nil, find_klast(@list, 20))
   end
 
   def test_outofbounds_after
+    assert_equal(nil, find_klast(@list, -5))
+  end
 
+  def test_outofbounds_zero
+    assert_equal(nil, find_klast(@list, 0))
   end
 
 end
