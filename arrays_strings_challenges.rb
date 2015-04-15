@@ -86,8 +86,9 @@ end
 # time: O(n)
 # space: O(n)
 def compress str
-  cmp  = ""
-  i, cur, cnt = 1, str[0], 1
+  return str if str.empty?
+
+  i, cur, cnt, cmpd = 1, str[0], 1, ""
   cmpd << cur
   while i < str.size
     if str[i] == cur
