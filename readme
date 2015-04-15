@@ -1,11 +1,23 @@
 Solutions to various coding challenges, written in Ruby
 
-1. Arrays and Strings - arrays_strings_challenges.rb
-   a. #string_uniq
-   b. #reverse
-   c. #is_permutation
-   d. #replace_space
-   e. #compress
-   f. #rotate_matrix
-   g. #zerofy_matrix
-   h. #is_rotation
+- Arrays and Strings - arrays_strings_challenges.rb
+	#string_uniq
+	#reverse
+	#is_permutation
+	#replace_space
+	#compress
+	#rotate_matrix
+	#zerofy_matrix
+	#is_rotation
+
+- Singly-linked list implementation - linked_list.rb
+	#insert
+	#remove
+	#to_s
+
+- Linked Lists - linked_list_challenges.rb
+	#remove_dupes
+	#find_klast
+	#remove_middle
+	#partition
+
